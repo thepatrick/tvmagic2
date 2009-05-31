@@ -1,5 +1,5 @@
-tvmagic
-=======
+tvmagic2
+========
 
 Takes a folder of files (e.g. .avi, .mov, .m4v) and adds them to iTunes, populating metadata using [TVRage.com][0] whenever possible.
 
