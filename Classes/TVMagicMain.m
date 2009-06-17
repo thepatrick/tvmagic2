@@ -147,19 +147,19 @@
 			file = [self wrapThisFile:[p stringByAppendingPathComponent:file]];
 		}
 		
-		if([file isMatchedByRegex:@"^The.Colbert.Report"]) {
+		if([file isMatchedByRegex:@"^The.Colbert.Report\\.[0-9]"]) {
 			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"The Colbert Report" guessName:NO];
 			if(output) [self addTVShowToiTunes:output];
 			
-		} else if([file isMatchedByRegex:@"^The.Daily.Show"]) {
+		} else if([file isMatchedByRegex:@"^The.Daily.Show\\.[0-9]"]) {
 			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"The Daily Show" guessName:NO];
 			if(output) [self addTVShowToiTunes:output];
 			
-		} else if([file isMatchedByRegex:@"^Conan.O.Brien"]) {
+		} else if([file isMatchedByRegex:@"^Conan.O.Brien\\.[0-9]"]) {
 			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"Conan O'Brien" guessName:YES];
 			if(output) [self addTVShowToiTunes:output];
 			
-		} else if([file isMatchedByRegex:@"^Jay.Leno"]) {
+		} else if([file isMatchedByRegex:@"^Jay.Leno\\.[0-9]"]) {
 			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"Jay Leno" guessName:YES];
 			if(output) [self addTVShowToiTunes:output];
 			

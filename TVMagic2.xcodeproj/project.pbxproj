@@ -25,6 +25,7 @@
 		CDB1A2190FD0FA93008722AF /* TVShow.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB1A2180FD0FA93008722AF /* TVShow.m */; };
 		CDB951FB0FD1EDEA005DA69F /* THCalendarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB951FA0FD1EDEA005DA69F /* THCalendarInfo.m */; };
 		CDB953400FD21EBF005DA69F /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9533F0FD21EBF005DA69F /* QTKit.framework */; };
+		CDCFC9940FD7B37500A4F519 /* TVGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCFC9930FD7B37500A4F519 /* TVGradientView.m */; };
 		CDD02A0E0FD107FC0001FA1B /* TVRage.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD02A0D0FD107FC0001FA1B /* TVRage.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		CDB951F90FD1EDEA005DA69F /* THCalendarInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCalendarInfo.h; sourceTree = "<group>"; };
 		CDB951FA0FD1EDEA005DA69F /* THCalendarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCalendarInfo.m; sourceTree = "<group>"; };
 		CDB9533F0FD21EBF005DA69F /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		CDCFC9920FD7B37500A4F519 /* TVGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVGradientView.h; sourceTree = "<group>"; };
+		CDCFC9930FD7B37500A4F519 /* TVGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVGradientView.m; sourceTree = "<group>"; };
 		CDD02A0C0FD107FC0001FA1B /* TVRage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVRage.h; sourceTree = "<group>"; };
 		CDD02A0D0FD107FC0001FA1B /* TVRage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVRage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +98,8 @@
 				CD5811D30F3C055900B24E2A /* TVMagicMain.m */,
 				CDD02A0C0FD107FC0001FA1B /* TVRage.h */,
 				CDD02A0D0FD107FC0001FA1B /* TVRage.m */,
+				CDCFC9920FD7B37500A4F519 /* TVGradientView.h */,
+				CDCFC9930FD7B37500A4F519 /* TVGradientView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				CDB1A2190FD0FA93008722AF /* TVShow.m in Sources */,
 				CDD02A0E0FD107FC0001FA1B /* TVRage.m in Sources */,
 				CDB951FB0FD1EDEA005DA69F /* THCalendarInfo.m in Sources */,
+				CDCFC9940FD7B37500A4F519 /* TVGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

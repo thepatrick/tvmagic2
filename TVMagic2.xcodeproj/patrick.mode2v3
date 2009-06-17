@@ -264,9 +264,6 @@
 									<array>
 										<string>29B97314FDCFA39411CA2CEA</string>
 										<string>080E96DDFE201D6D7F000001</string>
-										<string>CDB951F30FD1EDE0005DA69F</string>
-										<string>CDB1A2160FD0FA7A008722AF</string>
-										<string>CDB1A12F0FD0F0EC008722AF</string>
 										<string>29B97315FDCFA39411CA2CEA</string>
 										<string>29B97317FDCFA39411CA2CEA</string>
 										<string>089C165CFE840E0CC02AAC07</string>
@@ -276,12 +273,13 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>1</integer>
+											<integer>19</integer>
+											<integer>17</integer>
 											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 85}, {333, 564}}</string>
+									<string>{{0, 0}, {333, 557}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -291,7 +289,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{10, 27}, {350, 582}}</string>
+								<string>{{10, 27}, {350, 575}}</string>
 								<key>GroupTreeTableConfiguration</key>
 								<array>
 									<string>MainColumn</string>
@@ -304,7 +302,7 @@
 									<real>43</real>
 								</array>
 								<key>RubberWindowFrame</key>
-								<string>927 128 350 650 0 0 1280 778 </string>
+								<string>927 135 350 643 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
@@ -443,8 +441,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CD7DF0DF0FD269E900BF91EC</string>
-				<string>CD7DF0E00FD269E900BF91EC</string>
+				<string>CDABA00C0FD8EF7C00415333</string>
+				<string>CDABA00D0FD8EF7C00415333</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -481,10 +479,14 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/patrick/dev/Mac Stuff/TVMagic2/TVMagic2.xcodeproj</string>
+		<string>CDABA0230FD8F9D800415333</string>
+		<string>CDABA0240FD8F9D800415333</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>1C530D52069F1CE1000CFCEE</string>
+		<string>/Users/patrick/dev/from-git/tvmagic2/TVMagic2.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>927 128 350 650 0 0 1280 778 </string>
+	<string>927 135 350 643 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -642,7 +644,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -659,8 +661,6 @@
 							<string>136pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -700,7 +700,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>CD7E25C70FD25CB700198551</string>
+				<string>CDABA0210FD8F9D800415333</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -711,7 +711,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D52069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -820,13 +820,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>CD7DF0E10FD269E900BF91EC</string>
+				<string>CDABA0110FD8EF7C00415333</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CD7DF0E20FD269E900BF91EC</string>
-				<string>CD7DF0E30FD269E900BF91EC</string>
-				<string>CD7DF0E40FD269E900BF91EC</string>
-				<string>CD7DF0E50FD269E900BF91EC</string>
-				<string>CD7DF0E60FD269E900BF91EC</string>
+				<string>CDABA0120FD8EF7C00415333</string>
+				<string>CDABA0130FD8EF7C00415333</string>
+				<string>CDABA0140FD8EF7C00415333</string>
+				<string>CDABA0150FD8EF7C00415333</string>
+				<string>CDABA0160FD8EF7C00415333</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -953,8 +953,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -990,7 +988,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>CD7E25D40FD25DAF00198551</string>
+				<string>CDABA0220FD8F9D800415333</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
