@@ -273,8 +273,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>19</integer>
-											<integer>17</integer>
+											<integer>9</integer>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -441,8 +441,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CDABA00C0FD8EF7C00415333</string>
-				<string>CDABA00D0FD8EF7C00415333</string>
+				<string>CDBFF3AE0FF80E17001E8F74</string>
+				<string>CDBFF3AF0FF80E17001E8F74</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -479,9 +479,7 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CDABA0230FD8F9D800415333</string>
-		<string>CDABA0240FD8F9D800415333</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>CDBFF3B70FF80E17001E8F74</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/patrick/dev/from-git/tvmagic2/TVMagic2.xcodeproj</string>
 	</array>
@@ -700,7 +698,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>CDABA0210FD8F9D800415333</string>
+				<string>CDBFF3B00FF80E17001E8F74</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -820,13 +818,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>CDABA0110FD8EF7C00415333</string>
+				<string>CDBFF3B10FF80E17001E8F74</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CDABA0120FD8EF7C00415333</string>
-				<string>CDABA0130FD8EF7C00415333</string>
-				<string>CDABA0140FD8EF7C00415333</string>
-				<string>CDABA0150FD8EF7C00415333</string>
-				<string>CDABA0160FD8EF7C00415333</string>
+				<string>CDBFF3B20FF80E17001E8F74</string>
+				<string>CDBFF3B30FF80E17001E8F74</string>
+				<string>CDBFF3B40FF80E17001E8F74</string>
+				<string>CDBFF3B50FF80E17001E8F74</string>
+				<string>CDBFF3B60FF80E17001E8F74</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
