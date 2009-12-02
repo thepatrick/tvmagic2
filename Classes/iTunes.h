@@ -1,5 +1,6 @@
 /*
  * iTunes.h
+ * Generated automatically using the ScriptingBridge tools
  */
 
 #import <AppKit/AppKit.h>

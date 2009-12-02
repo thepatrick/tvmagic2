@@ -11,6 +11,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CD17C3F5109D14A600FC084D /* TVMagic2.sdef in Resources */ = {isa = PBXBuildFile; fileRef = CD17C3F4109D14A600FC084D /* TVMagic2.sdef */; };
+		CD17C40C109D191100FC084D /* TVMagicApp.m in Sources */ = {isa = PBXBuildFile; fileRef = CD17C40B109D191100FC084D /* TVMagicApp.m */; };
 		CD360EEA0F3C2866007FA725 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD360EE90F3C2866007FA725 /* ScriptingBridge.framework */; };
 		CD360F1D0F3C2FA6007FA725 /* nothing.mov in Resources */ = {isa = PBXBuildFile; fileRef = CD360F1C0F3C2FA6007FA725 /* nothing.mov */; };
 		CD5811D40F3C055900B24E2A /* TVMagicMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5811D30F3C055900B24E2A /* TVMagicMain.m */; };
@@ -40,6 +42,9 @@
 		32CA4F630368D1EE00C91783 /* TVMagic2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVMagic2_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TVMagic2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMagic2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD17C3F4109D14A600FC084D /* TVMagic2.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = TVMagic2.sdef; sourceTree = "<group>"; };
+		CD17C40A109D191100FC084D /* TVMagicApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVMagicApp.h; sourceTree = "<group>"; };
+		CD17C40B109D191100FC084D /* TVMagicApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVMagicApp.m; sourceTree = "<group>"; };
 		CD360EE90F3C2866007FA725 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		CD360F1C0F3C2FA6007FA725 /* nothing.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = nothing.mov; sourceTree = "<group>"; };
 		CD5811D20F3C055900B24E2A /* TVMagicMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVMagicMain.h; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 				CDD02A0D0FD107FC0001FA1B /* TVRage.m */,
 				CDCFC9920FD7B37500A4F519 /* TVGradientView.h */,
 				CDCFC9930FD7B37500A4F519 /* TVGradientView.m */,
+				CD17C40A109D191100FC084D /* TVMagicApp.h */,
+				CD17C40B109D191100FC084D /* TVMagicApp.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				CD17C3F4109D14A600FC084D /* TVMagic2.sdef */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				CD360F1D0F3C2FA6007FA725 /* nothing.mov in Resources */,
+				CD17C3F5109D14A600FC084D /* TVMagic2.sdef in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +286,7 @@
 				CDD02A0E0FD107FC0001FA1B /* TVRage.m in Sources */,
 				CDB951FB0FD1EDEA005DA69F /* THCalendarInfo.m in Sources */,
 				CDCFC9940FD7B37500A4F519 /* TVGradientView.m in Sources */,
+				CD17C40C109D191100FC084D /* TVMagicApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

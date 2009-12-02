@@ -21,10 +21,14 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0b1</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
+	<string>8</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>TVMagicApp</string>
+	<key>NSAppleScriptEnabled</key>
+	<true/>
+	<key>OSAScriptingDefinition</key>
+	<string>TVMagic2.sdef</string>
 </dict>
 </plist>

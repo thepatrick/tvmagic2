@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary title="TVMagic2 Terminology" xmlns:xi="http://www.w3.org/2003/XInclude">
+
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+
+    <suite name="TVMagic2 Suite" code="Tvm2" description="TVMagic2 specific classes.">
+
+		<command name="transfer all to itunes" code="Tvm2ttit" description="Transfer pending videos to iTunes.">
+		</command>
+
+		<command name="transfer to itunes" code="Tvm2tott" description="Transfer one file to iTunes.">
+			<direct-parameter description="The file to be transfer.">
+				<type type="file" list="no"/>
+			</direct-parameter>
+		</command>
+
+		<class name="application" code="capp" description="The application's top-level scripting object.">
+			<cocoa class="TVMagicApp"/>
+			<responds-to command="transfer all to itunes">
+				<cocoa method="transferToiTunes:"/>
+			</responds-to>
+			<responds-to command="transfer to itunes">
+				<cocoa method="transferOneToiTunes:"/>
+			</responds-to>
+		</class>
+
+	</suite>￼
+</dictionary>

@@ -73,6 +73,7 @@
 	DLog(@"cache file is: %@", cacheFile);
 	cache = [[TVCache storeWithFile:cacheFile] retain];
 	rage = [[TVRage alloc] init];
+	currentlyWorking = NO;
 }
 
 -(void)dealloc {
@@ -109,71 +110,93 @@
 	[[NSUserDefaults standardUserDefaults] setValue:[panel directory] forKey:(NSString*)contextInfo];
 }	
 
+-(void)transferSingleFile:(NSURL*)filePath {
+	if(!singleFileWaitingList)
+		singleFileWaitingList = [[NSMutableArray arrayWithCapacity:1] retain];
+	[singleFileWaitingList addObject:filePath];
+	if(!currentlyWorking) {
+		[self runLoopKicker:singleFileWaitingList];
+		[singleFileWaitingList release];
+		singleFileWaitingList = nil;
+	}
+}
+
 -(IBAction)start:(id)sender {
+	if(currentlyWorking) return;
 	
 	NSString *p = [[NSUserDefaults standardUserDefaults] valueForKey:@"OriginalFiles"];
+	NSMutableArray *toDealWith = [NSMutableArray arrayWithCapacity:1];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
 	NSError *err;	
 	NSArray *arr = [fileManager contentsOfDirectoryAtPath:p error:&err];
 	
-	NSInteger movies = 0;
 	for(NSString *file in arr) {
-		
-		if([[file pathExtension] isMatchedByRegex:@"(mov|avi|mp4|m4v|mkv)"]) {
-			movies++;
-		}
+		if([[file pathExtension] isMatchedByRegex:@"(mov|avi|mp4|m4v|mkv)"])
+			[toDealWith addObject:[NSURL fileURLWithPath:[p stringByAppendingPathComponent:file]]];
 	}
 	
-	[numberOfFiles setTitleWithMnemonic:[NSString stringWithFormat:@"%d", movies]];
+	[self runLoopKicker:toDealWith];
+}
+
+-(void)runLoopKicker:(NSMutableArray*)toDealWith {
 	
-	[progressBar setMaxValue:movies];
+	[numberOfFiles setTitleWithMnemonic:[NSString stringWithFormat:@"%d", [toDealWith count]]];
+	
+	[progressBar setMaxValue:[toDealWith count]];
 	[progressBar setDoubleValue:0];
 	
 	[progressInfo setTitleWithMnemonic:@"Starting up..."];
 	
-	[self performSelectorInBackground:@selector(runLoopOfFiles:) withObject:arr];
+	[self performSelectorInBackground:@selector(runLoopOfFiles:) withObject:toDealWith];
+}
+
+-(void)runLoopGoalPost {
+	if(singleFileWaitingList) {
+		[self runLoopKicker:singleFileWaitingList];
+		[singleFileWaitingList release];
+		singleFileWaitingList = nil;
+	}
 }
 
 -(void)runLoopOfFiles:(NSArray*)files {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	[files retain];
 	
-	NSString *p = [[NSUserDefaults standardUserDefaults] valueForKey:@"OriginalFiles"];
-	
-	for(NSString *file in files) {
+	for(NSURL *fileUrl in files) {
+		NSString *file = [fileUrl path];
 		if([[file pathExtension] isEqualToString:@"avi"]) {
-			file = [self wrapThisFile:[p stringByAppendingPathComponent:file]];
+			file = [self wrapThisFile:file];
 		}
 		
 		if([file isMatchedByRegex:@"^The.Colbert.Report\\.[0-9]"]) {
-			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"The Colbert Report" guessName:NO];
+			NSDictionary *output = [self dateBased:file show:@"The Colbert Report" guessName:NO];
 			if(output) [self addTVShowToiTunes:output];
 			
 		} else if([file isMatchedByRegex:@"^The.Daily.Show\\.[0-9]"]) {
-			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"The Daily Show" guessName:NO];
+			NSDictionary *output = [self dateBased:file show:@"The Daily Show" guessName:NO];
 			if(output) [self addTVShowToiTunes:output];
 			
 		} else if([file isMatchedByRegex:@"^Conan.O.Brien\\.[0-9]"]) {
-			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"Conan O'Brien" guessName:YES];
+			NSDictionary *output = [self dateBased:file show:@"Conan O'Brien" guessName:YES];
 			if(output) [self addTVShowToiTunes:output];
 			
 		} else if([file isMatchedByRegex:@"^Jay.Leno\\.[0-9]"]) {
-			NSDictionary *output = [self dateBased:[p stringByAppendingPathComponent:file] show:@"Jay Leno" guessName:YES];
+			NSDictionary *output = [self dateBased:file show:@"Jay Leno" guessName:YES];
 			if(output) [self addTVShowToiTunes:output];
 			
 			
 		// Standard TV Shows
 		} else if([file isMatchedByRegex:@"[\\S\\s]([0-9]+)[Ee]([0-9]+)(.*)\\.(mov|avi|m4v|mp4)$"]) {
-			NSDictionary *output = [self standard:[p stringByAppendingPathComponent:file]];
+			NSDictionary *output = [self standard:file];
 			DLog(@"Output was %@", output);
 			[self addTVShowToiTunes:output];
 
 		// Standard Movies
 		} else if([file isMatchedByRegex:@"^(.*)\\.MOVIE\\.([a-zA-Z]+)\\.(m4v|mp4)$"]) {
 			DLog(@"I think this is a movie");
-			[self movie:[p stringByAppendingPathComponent:file]];
+			[self movie:file];
 			
 		}
 		
@@ -187,7 +210,9 @@
 		
 	}
 	[progressInfo performSelectorOnMainThread:@selector(setTitleWithMnemonic:) withObject:@"Done." waitUntilDone:YES];
-
+	
+	currentlyWorking = NO;
+	
 	[files release];
 	[pool release];
 	
@@ -195,7 +220,6 @@
 
 -(NSString*)wrapThisFile:(NSString*)file {
 	NSString *filePath = [file stringByReplacingOccurrencesOfString:@".avi" withString:@".mov"];
-	NSString *outFileName = [filePath lastPathComponent];
 
 	NSError *err = nil;
 	
@@ -234,7 +258,7 @@
 	
 	[mMovie release];
 	[wMovie release];
-	return outFileName;
+	return filePath;
 }
 
 -(NSDictionary*)standard:(NSString*)file {

@@ -48,6 +48,9 @@
 	TVCache *cache;
 	TVRage *rage;
 	
+	BOOL currentlyWorking;
+	
+	NSMutableArray *singleFileWaitingList;
 }
 
 @property (nonatomic, retain) IBOutlet NSTextField *lookForFilesIn;
@@ -65,7 +68,11 @@
 
 -(IBAction)changeMoveTo:(id)sender;
 -(IBAction)changeLookFor:(id)sender;
+
+-(void)transferSingleFile:(NSURL*)filePath;
 -(IBAction)start:(id)sender;
+
+-(void)runLoopKicker:(NSArray*)toDealWith;
 
 -(NSString*)wrapThisFile:(NSString*)file;
 -(NSDictionary*)standard:(NSString*)file;

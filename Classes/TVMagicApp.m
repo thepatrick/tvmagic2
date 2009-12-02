@@ -1,4 +1,7 @@
-﻿// 
+//
+//  TVMagicApp.m
+//  TVMagic2
+// 
 // 	Copyright (c) 2009 Patrick Quinn-Graham
 // 
 // 	Permission is hereby granted, free of charge, to any person obtaining
@@ -20,9 +23,19 @@
 // 	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // 	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-/* Localized versions of Info.plist keys */
+#import "TVMagicMain.h"
+#import "TVMagicApp.h"
 
 
-CFBundleName = "TVMagic2";
-CFBundleGetInfoString = "TVMagic2 version 1.0, Copyright 2009 Patrick Quinn-Graham.";
-NSHumanReadableCopyright = "Copyright © 2009 Patrick Quinn-Graham.";
+@implementation TVMagicApp
+
+- (void)transferToiTunes:(NSScriptCommand*)command {
+	[(TVMagicMain*)[self delegate] start:self];
+}
+
+- (void)transferOneToiTunes:(NSScriptCommand*)command {
+	NSURL *thing = [command directParameter];
+	[(TVMagicMain*)[self delegate] transferSingleFile:thing];
+}
+
+@end

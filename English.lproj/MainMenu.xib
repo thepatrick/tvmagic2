@@ -2,17 +2,17 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">10A354</string>
-		<string key="IBDocument.InterfaceBuilderVersion">728</string>
-		<string key="IBDocument.AppKitVersion">1019</string>
-		<string key="IBDocument.HIToolboxVersion">421.00</string>
+		<string key="IBDocument.SystemVersion">10C531</string>
+		<string key="IBDocument.InterfaceBuilderVersion">732</string>
+		<string key="IBDocument.AppKitVersion">1038.25</string>
+		<string key="IBDocument.HIToolboxVersion">458.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">728</string>
+			<string key="NS.object.0">732</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
+			<integer value="371"/>
 			<integer value="29"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -724,7 +724,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 592}, {597, 158}}</string>
 				<int key="NSWTFlags">1954021376</int>
-				<string key="NSWindowTitle">TVMagic2</string>
+				<string key="NSWindowTitle">TV Magic 2</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="828256260">
 					<object class="NSMutableString" key="NSToolbarIdentifier">
